@@ -1,0 +1,33 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My Zuplo API"
+  },
+  "paths": {
+    "/api/inngest": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get,post,put": {
+        "summary": "Inngest",
+        "description": "Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do `eiusmod tempor` incididunt ut labore et dolore magna aliqua.",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "default",
+            "module": "$import(./modules/hello-world)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": [],
+            "outbound": [
+              "custom-code-outbound"
+            ]
+          }
+        },
+        "operationId": "8a27f403-b209-4cbf-b841-75b7fa34de74"
+      }
+    }
+  }
+}
