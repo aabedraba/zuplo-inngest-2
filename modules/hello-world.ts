@@ -7,7 +7,6 @@ import { serve } from "inngest/edge";
 
 export default async function (request: ZuploRequest, context: ZuploContext) {
   const deploymentName = new URL(request.url).host.split(".")[0];
-
   const inngest = new Inngest({
     name: "My Zuplo Project",
     env: deploymentName,
