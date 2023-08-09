@@ -10,7 +10,7 @@ export default async function (request: ZuploRequest, context: ZuploContext) {
 
   const inngest = new Inngest({
     name: "My Zuplo Project",
-    env: deploymentName === "zuplo-inngest-main-abbdd11" ? undefined : deploymentName,
+    env: deploymentName,
     eventKey: environment.INNGEST_EVENT_KEY,
     logger: context.log,
   });
